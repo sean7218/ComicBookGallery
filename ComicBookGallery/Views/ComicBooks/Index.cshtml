@@ -13,7 +13,10 @@
         <div class="col-md-3">
             <h4>@Html.ActionLink(comicbook.DisplayText, "Detail",
                new { id = comicbook.Id  }  )</h4>
-             <img src="~/Images/@comicbook.CoverImageFileName" alt="@comicbook.DisplayText" class="img-responsive" />
+            <a href="@Url.Action("Detail", new { id = comicbook.Id })" >
+                <img src="~/Images/@comicbook.CoverImageFileName" alt="@comicbook.DisplayText" class="img-responsive" />
+            </a>
+             
         </div>
     }
 
